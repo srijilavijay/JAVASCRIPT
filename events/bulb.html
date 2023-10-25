@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb ON & OFF</title>
+    <style>
+      img {
+        height: 200px;
+        width: 175px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="bulboff"
+      src="../images/bulb-off-image.png"
+      onclick="turnOnOff()"
+      alt=""
+    />
+    <h4 id="demo">Click on the Bulb to turn on and off</h4>
+    <script>
+      function turnOnOff() {
+        var image = document.getElementById("bulboff");
+        var a = document.getElementById("demo");
+        if (image.src.match("bulb-off")) {
+          image.src = "../images/bulb-on-image.png";
+          a.style.color = "green";
+        } else {
+          image.src = "../images/bulb-off-image.png";
+          a.style.color = "black";
+        }
+      }
+    </script>
+  </body>
+</html>

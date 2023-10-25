@@ -1,0 +1,36 @@
+<!--Polymorphism is one of the core concepts of object-oriented programming languages 
+    where poly means many and morphism means transforming one form into another. 
+    Polymorphism means the same function with different signatures is called many times-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class firstClass {
+        add() {
+          document.write("First Method" + "<br>");
+        }
+      }
+      class secondClass {
+        add() {
+          document.write(30 + 40);
+        }
+      }
+      class thirdClass {
+        add() {
+          document.write("<br>" + "Second Method" + "<br>");
+        }
+      }
+      let obj1 = new firstClass();
+      let obj2 = new secondClass();
+      let obj3 = new thirdClass();
+      obj1.add();
+      obj2.add();
+      obj3.add();
+    </script>
+  </body>
+</html>

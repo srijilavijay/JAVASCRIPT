@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p id="demo"></p>
+</head>
+<body>
+    <script>
+        //object
+        const car = {Name:"toyota", Color:"red", Model:"2020", Place:"Kozhikode"};
+        console.log(car);
+        let s="";
+        for(let x in car)
+        {
+            s+=car[x] + "<br>";
+        }
+        document.write(s);
+    </script>
+</body>
+</html>

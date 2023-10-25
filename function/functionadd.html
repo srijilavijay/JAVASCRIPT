@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Sum of Two Numbers</h3>
+        
+    <label>Enter the first number: </label>
+    <input type="number" name="" id="num1" /><br><br>
+    <label>Enter the second number: </label>
+    <input type="number" name="" id="num2" /><br><br>
+    <button type="submit" onclick="add()">Calculate Sum</button>
+
+    <p id="demo"></p>
+    <script>
+      function add() {
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+        // let sum= +a + +b;
+        let sum = Number(a) + Number(b);
+        // let result = eval(sum);
+        document.getElementById("demo").innerHTML = sum;
+      }
+    </script>
+  </body>
+</html>

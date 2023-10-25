@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .userform
+        {
+            margin: 100px 500px;
+            padding: 20px;
+            width: 500px;
+            background-color: blanchedalmond;
+            height: auto;
+            border: 5px solid white;
+            border-radius: 1.5rem;
+            color:brown;
+        }
+        h1{
+            text-align: center;
+            color: brown;
+        }
+        form 
+        {
+            width: 500px;
+        }
+        label
+        {
+            padding-left: 150px;
+            text-align: right;
+            text-align: justify;
+        }
+        input
+        {
+            margin-left: 300px;
+            height: 20px;
+        }
+        #plus
+        {
+            top: 337px;
+            right: 512px;
+            width: 21px;
+            position: absolute;
+            float: right;
+            height: 20px;
+        }
+        button{
+            background-color: rgb(223, 100, 100);
+
+        }
+        #submit
+        {
+            width: 100px;
+            height: 30px;
+            border-radius: .5rem;
+            margin-left: 210px;
+            color: white;
+        
+        }
+        #submit:hover{
+            background-color: aliceblue;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div class="userform">
+        
+            <h1>User Form</h1>
+            <form>
+            <label>Enter Your Name:</label>
+            <input type="text" placeholder="Name"><br><br>
+            <label>Age:</label>
+            <input type="text" placeholder="Age"><br><br>
+            <label>Enter Your Address:</label>
+            <input type="text" name="address" placeholder="Address Line">
+        </form>
+        <button id="plus" onclick="addNewInput()">+</button><br>
+        <div id="inputContainer"></div><br>
+        <button id="submit">Submit</button>
+    </div>
+    </section>
+
+    <script>
+        let inputCount = 0;
+        function addNewInput()
+        {
+            inputCount++;
+            const inputContainer = document.getElementById("inputContainer");
+            
+            //create a div to hold the input and the minus button
+            const inputDiv = document.createElement("div");
+
+            //Create an Input FIeld for Address Line
+            const addressField =  document.createElement("input");
+            addressField.type = "text";
+            addressField.placeholder = "Address Line " + inputCount;
+            addressField.style.marginTop="5px";
+            addressField.style.marginBottom = "10px";
+            
+            //Create a "Minus" button
+            const minusButton = document.createElement("button");
+            minusButton.textContent = "-";
+            minusButton.onclick = function() {
+                removeInputField(inputDiv);
+            };
+
+            //Append the Input and "Minus" button to Input Div
+            inputDiv.appendChild(addressField);
+            inputDiv.appendChild(minusButton);
+
+            //Append tHe Input Div to Input Container
+            inputContainer.appendChild(inputDiv);
+        }
+        function removeInputField(inputDiv)
+        {
+            const inputContainer = document.getElementById("inputContainer");
+            inputContainer.removeChild(inputDiv);
+        }
+    </script>
+    
+</body>
+</html>

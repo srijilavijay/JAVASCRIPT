@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let car = ["toyota", "maruthi", "zen"];
+        let color=["red", "blue", "yellow", "orange"];
+        document.write(car+"<br>"+color);
+        console.log(color[0]);
+
+        color.pop();
+        console.log(color);
+
+        color.push("violet");
+        console.log(color);
+
+        delete color[1];
+        console.log(color);
+
+        color.splice(1,0,"pink");
+        color.splice(1,1,"pink");
+        console.log(color);
+
+        let c = color.slice(0,2);
+        console.log(c);
+    </script>
+</body>
+</html>

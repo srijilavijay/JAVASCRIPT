@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>Futura Labs</h1>
+        <button onclick="createText()">Create Element</button>
+        <button onclick="removeText()">Remove Element</button>
+    </section>
+    <script>
+        function createText()
+        {
+            let newpara = document.createElement("p");
+            newpara.textContent = "Welcome to JAVASCRIPT";  
+            let sec = document.querySelector("section");
+            sec.appendChild(newpara);
+        }
+        function removeText()
+        {
+            let sec = document.querySelector("section");
+            let newpara = sec.querySelector("p");
+            sec.removeChild(newpara);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <section>
+        <div class="container">
+            <form required>
+                <h1>Null Validation</h1>
+                <label>Enter your name:</label>
+                <input type="text" placeholder="Name" id="name"><br><br>
+                <label>Mobile Number:</label>
+                <input type="number" placeholder="Mobile Number" id="mobileNumber"><br><br>
+                <label>Place:</label>
+                <input type="text" name="" id="place" placeholder="Place"><br><br>
+                <label>Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email"><br><br>
+                <label>User Name:</label>
+                <input type="text" name="userName" id="userName" placeholder="User Name"><br><br>
+                <label>Password:</label>
+                <input type="password" name="password" id="password" placeholder="Password">
+                <button onclick="nullValidate();return false;">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+    <script>
+        function nullValidate()
+        {
+            var name = document.getElementById("name").value;
+            var mobileNumber = document.getElementById("mobileNumber").value;
+            var place = document.getElementById("place").value;
+            var email = document.getElementById("email").value;
+            var userName = document.getElementById("userName").value;
+            var password = document.getElementById("password").value;
+            if(name == "")
+            {
+                alert("name");
+                return false;
+            }
+            if(mobileNumber == "")
+            {
+                alert("mobile");
+                return false;
+            }
+            if(place == "")
+            {
+                alert("place");
+                return false;
+            }
+            if(email == "")
+            {
+                alert("email");
+                return false;
+            }
+            if(userName == "")
+            {
+                alert("userName");
+                return false;
+            }
+            if(password == "")
+            {
+                alert("password");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
