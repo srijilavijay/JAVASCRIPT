@@ -6,13 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="demo" style="color: blueviolet;" onmouseover="myFunction()">Javascript</h1>
+    <h1 id="demo" style="color: blueviolet;font-size: 50px;" onmouseover="myFunction()" onmouseout="resetColor()">Javascript</h1>
     <p>This event demonstrates the onmoveover event on h1</p>
     <script>
         function myFunction()
         {
-            document.getElementById("demo").style.color = "green";
+            var head = document.getElementById("demo");
+            head.style.color = "green";
+            head.style.fontSize = "100px";
             return false;
+        }
+        function  resetColor()
+        {
+            var head = document.getElementById("demo");
+            head.style.color = "blueviolet";
+            head.style.fontSize = "50px";
         }
     </script>
 </body>

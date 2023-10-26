@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class getEmployee {
+        constructor() {
+          var name;
+          var age;
+          var email;
+          var address;
+        }
+        getName()
+        {
+            return this.name;
+        }
+        getAge()
+        {
+            return this.age;
+        }
+        getEmail()
+        {
+            return this.email;
+        }
+        getAddress()
+        {
+            return this.address;
+        }
+      }
+      class setEmployee extends getEmployee {
+        setDetails(name, age, email, address) {
+          this.name = name;
+          this.age = age;
+          this.email = email;
+          this.address = address;
+        }
+      }
+      let emp = new setEmployee();
+      emp.setDetails("Anju", 23, "anju@gmail.com", "Kozhikode");
+      document.write(
+        "Employee Name: " +
+          emp.getName() +
+          "<br>" +
+          "Employee Age: " +
+          emp.getAge() +
+          "<br>" +
+          "Employee Email: " +
+          emp.getEmail() +
+          "<br>" +
+          "Employee Address : " +
+          emp.getAddress()
+      );
+    </script>
+  </body>
+</html>
